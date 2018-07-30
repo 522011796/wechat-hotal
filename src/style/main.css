@@ -1,0 +1,157 @@
+html,body,#app{
+  font-family: '微软雅黑';
+  font-size:14px;
+  background: #dddddd;
+  height: 100%;
+  width: 100%;
+}
+.index-top-block{
+  height:10.5rem;
+  width: 100%;
+  background: #dddddd;
+}
+.index-room-no{
+  height:2rem;
+  line-height:2rem;
+  width: 80%;
+  margin:0 auto;
+  background: #ffffff;
+  border-radius:5px;
+  position: absolute;
+  bottom:-15px;
+  left:9%;
+  font-size:12px;
+  color:#434343;
+  padding-left:5px;
+}
+.index-room-opr{
+  height:180px;
+  margin-top:25px;
+  background: #ffffff;
+}
+.main{
+  overflow-y: auto;
+  overflow:auto;/* winphone8和android4+ */
+  webkit-overflow-scrolling: touch;
+  z-index:1;
+  height:100%;
+  padding:10px 10px;
+  background: #f3f3f3;
+}
+.index-left-top{
+  text-align: center;
+  color: #fff;
+  background-color: #ffffff;
+}
+.index-right-top{
+  /*text-align: center;*/
+  color: #fff;
+}
+.index-right-item{
+  height:10rem;
+}
+.index-left-item{
+  height:10rem;
+}
+.index-right-item-child{
+  height:4.5rem;
+  line-height: 4.5rem;
+  background-color: #ffffff;
+}
+.index-list-item{
+  height:3rem;
+  line-height: 3rem;
+  background-color: #ffffff;
+}
+.index-list-item-service{
+  display: inline-block;
+  height:3rem;
+  line-height: 3rem;
+  background: #ffffff;
+  width: 100px;
+}
+.margin-top10{
+  margin-top:1rem;
+}
+.margin-top15{
+  margin-top:1.5rem;
+}
+.margin-top20{
+  margin-top:2rem;
+}
+.margin-top25{
+  margin-top:4rem;
+}
+.margin-right15{
+  margin-right:15px;
+}
+.padding-tb-10{
+  padding:10px 0px;
+}
+.font-10{
+  font-size:0.8rem;
+}
+.font-12{
+  font-size:12px;
+}
+.color-434343{
+  color:#434343;
+}
+.color-8a8a8a{
+  color:#8a8a8a;
+}
+.text-center{
+  text-align: center;
+}
+.user-logo{
+  height:4rem;
+  width: 4rem;
+  border:1px solid #dddddd;
+  border-radius: 4rem;
+  margin-top:10px;
+  margin-left:15px;
+}
+.user-info{
+  margin-left:25px;
+  margin-top:10px;
+}
+.myInfoList .weui-cells{
+  margin-top: 1.17647059em;
+  background-color: #FFFFFF;
+  line-height: 1.41176471;
+  font-size: 17px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+.myInfoList span{
+  position: relative;
+  top:-1px;
+}
+.control-right-opr{
+  margin-left:55px;
+  height:85%;
+  width:78%;
+  position: absolute;
+  top:1.5rem;
+  background: #ffffff
+}
+.control-menu{
+  text-align: center;
+  margin-top:50px;
+  height:40px;
+  line-height:40px;
+  width: 40px
+}
+.img-class{
+  height:100%;
+  width: 100%;
+}
+.control-opr-img{
+  height:2.5rem;
+  width: 2.5rem;
+}
+.control-opr-title{
+  color:#434343;
+  font-size:1.1rem;
+}
