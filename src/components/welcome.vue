@@ -18,7 +18,7 @@
     var _self = this;
     setTimeout(function () {
       _self.init();
-    },1500);
+    },500);
   },
   methods:{
     init(){
