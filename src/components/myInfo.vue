@@ -3,14 +3,14 @@
     <div style="background: #ffffff;border-radius: 5px;height:80px;">
       <flexbox>
         <flexbox-item :span="2">
-          <div class="user-logo">
-
+          <div>
+            <img :src="headerurl" class="user-logo">
           </div>
         </flexbox-item>
         <flexbox-item>
           <div class="user-info">
-            <div class="color-434343">ricky</div>
-            <div class="color-434343">xxxxxxxxxxx</div>
+            <div class="color-434343">{{nickname}}</div>
+            <div class="color-434343">{{msg}}</div>
           </div>
         </flexbox-item>
       </flexbox>
@@ -40,13 +40,24 @@
 </template>
 
 <script>
-  import { Group,GroupTitle,Cell,Panel,Flexbox, FlexboxItem } from 'vux'
-  export default {
+import { Group,GroupTitle,Cell,Panel,Flexbox, FlexboxItem } from 'vux'
+export default {
   components: { Group,GroupTitle,Cell,Panel,Flexbox, FlexboxItem},
   name: 'index',
   data () {
     return {
-      msg:''
+      msg:'',
+      nickname:'',
+      headerurl:''
+    }
+  },
+  created(){
+    this.initData();
+  },
+  methods:{
+    initData(){
+      this.nickname = localStorage.getItem("nickname");
+      this.headerurl = localStorage.getItem("headerurl");
     }
   }
 }

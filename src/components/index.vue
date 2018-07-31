@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="index-top-block" style="position: relative;z-index: 2">
-      <div class="index-room-no">{{roomNo}}</div>
+      <div class="index-room-no">{{roomNo}}--{{openid}}</div>
     </div>
     <div class="main">
       <div class="font-12 margin-top10 color-434343">房控</div>
@@ -56,13 +56,28 @@
 </template>
 
 <script>
+  const appId = 'wx7605c75d9d12567d';
+  const appSecret = '80b20533b5a84cec3b778af140d39582';
+  //const redrect_url = 'https://www.rickycloud.cn/wechat-hotal/#/';
+  //const url_code = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7605c75d9d12567d&redirect_uri="+redrect_url+"&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+  //const url_code2 = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7605c75d9d12567d&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+
   import { Group,GroupTitle,Cell,Tabbar,TabbarItem,ViewBox,Flexbox, FlexboxItem } from 'vux'
   export default {
   components: { Group,GroupTitle,Cell,Tabbar,TabbarItem,ViewBox,Flexbox, FlexboxItem},
   name: 'index',
   data () {
     return {
-      roomNo: '暂无房间号'
+      roomNo: '暂无房间号',
+      openid: ''
+    }
+  },
+  created(){
+
+  },
+  methods:{
+    init(){
+
     }
   }
 }

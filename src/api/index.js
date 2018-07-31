@@ -2,7 +2,8 @@ import qs from 'qs';
 
 // 配置API接口地址
 //var root = 'http://47.98.169.141:9991'
-var root = '/';
+var root = 'https://www.rickycloud.cn/wechat';
+//var root = '/';
 // 引用axios
 var axios = require('axios')
 // 自定义判断元素类型JS
@@ -75,7 +76,7 @@ function apiAxios (method, url ,params, success, failure, header) {
 
 // 返回在vue模板中的调用接口
 export default {
-  get: function (url, params, success, failure) {
+  get: function (url, params, success, failure, header) {
     return apiAxios('GET', url, params, success, failure)
   },
   post: function (url, params, success, failure,header) {

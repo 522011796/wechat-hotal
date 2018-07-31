@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Welcome from '@/components/welcome'
+import Layout from '@/components/layout'
 import Index from '@/components/index'
 import MyInfo from '@/components/myInfo'
 import RoomControl from '@/components/roomControl'
@@ -11,43 +13,57 @@ import RoomControlChuanglian from '@/components/roomControl-chuanglian'
 Vue.use(Router)
 
 export default new Router({
+  // mode:'history',
   routes: [
     {
+      path: '/welcome',
+      name: 'welcome',
+      component: Welcome
+    },
+    {
       path: '/',
-      name: 'index',
-      component: Index
-    },
-    {
-      path: '/myInfo',
-      name: 'MyInfo',
-      component: MyInfo
-    },
-    {
-      path: '/roomControl',
-      name: 'RoomControl',
-      component: RoomControl,
-      children:[
+      //name: 'Home',
+      component: Layout,
+      children: [
         {
-          path: '/roomControl/deng',
-          name: 'RoomControlDeng',
-          component: RoomControlDeng,
+          path: '/',
+          name: 'index',
+          component: Index
         },
         {
-          path: '/roomControl/kongtiao',
-          name: 'RoomControlKongtiao',
-          component: RoomControlKongtiao,
+          path: '/myInfo',
+          name: 'MyInfo',
+          component: MyInfo
         },
         {
-          path: '/roomControl/chuanglian',
-          name: 'RoomControlChuanglian',
-          component: RoomControlChuanglian,
-        },
-        {
-          path: '/roomControl/yinxiang',
-          name: 'RoomControlYinxiang',
-          component: RoomControlYinxiang,
+          path: '/roomControl',
+          name: 'RoomControl',
+          component: RoomControl,
+          children:[
+            {
+              path: '/roomControl/deng',
+              name: 'RoomControlDeng',
+              component: RoomControlDeng,
+            },
+            {
+              path: '/roomControl/kongtiao',
+              name: 'RoomControlKongtiao',
+              component: RoomControlKongtiao,
+            },
+            {
+              path: '/roomControl/chuanglian',
+              name: 'RoomControlChuanglian',
+              component: RoomControlChuanglian,
+            },
+            {
+              path: '/roomControl/yinxiang',
+              name: 'RoomControlYinxiang',
+              component: RoomControlYinxiang,
+            }
+          ]
         }
       ]
     }
   ]
-})
+});
+
