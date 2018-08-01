@@ -97,6 +97,7 @@
         initialSliderX: 0,
         gradientStart: coldGradient.start,
         gradientEnd: coldGradient.end,
+        initTemperature:0
       }
     },
     filters: {
@@ -112,14 +113,21 @@
         return `background: linear-gradient(to bottom right, ${this.gradientStart}, ${this.gradientEnd});`
       },
       currentTemperature () {
-        const tempRangeStart = 30
-        const tempRange = 20
-        return tempRangeStart-(this.sliderX / sliderMaxX * tempRange )
+        var _self = this;
+        const tempRangeStart = 30;
+        const tempRange = 20;
+        return tempRangeStart-parseInt((this.sliderX / sliderMaxX * tempRange));
       }
     },
+    created(){
+      this.init();
+    },
     methods:{
+      init(){
+        var tmp = 27;
+        this.sliderX = (30-tmp) * 254 / 20;
+      },
       startDrag (e) {
-        console.log(e);
         this.dragging = true
         this.initialMouseX = e.touches[0].pageY
         this.initialSliderX = this.sliderX
