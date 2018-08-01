@@ -155,3 +155,78 @@ html,body,#app{
   color:#434343;
   font-size:1.1rem;
 }
+
+/*温度计*/
+.main-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 22rem;
+  width: 120px;
+  border:1px solid #dddddd;
+}
+
+.upper-container {
+  position: relative;
+  background: linear-gradient(to bottom right, #5564c2, #3a2e8d);
+}
+.lower-container {
+  background-color: #f5f5f5;
+}
+
+.temperature-text {
+  position: relative;
+  top: 40%;
+  left:5%;
+  font-size: 1.2rem;
+  width: 10%;
+  text-align: center;
+  user-select: none;
+}
+
+.temperature-element {
+  text-align: center;
+  display: block;
+  width: 40px;
+  height:49px;
+  margin: 10px 0px 10px 0px;
+  opacity: 0.7;
+}
+
+.temperature-element-line {
+  font-size: 7px;
+}
+
+.temperature-graduation {
+  position: absolute;
+  left: calc(40% - 0px);
+  top: calc(4% - 0px);
+  user-select: none;
+}
+
+.slider-container {
+  width: 20px;
+  height: 70px;
+  margin-top: 0px;
+  margin-left: calc(50% - 77px);
+  position: relative;
+}
+
+.slider-button {
+  position: absolute;
+  left: 42px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #bbbbbb;
+  cursor: grab;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  z-index: 999999;
+}
+
+.slider-icon {
+  margin-top: 13px;
+  margin-left: 16px;
+  color: white;
+}
