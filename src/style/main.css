@@ -230,3 +230,61 @@ html,body,#app{
   margin-left: 16px;
   color: white;
 }
+
+/*****窗帘*****/
+.main-chuanglian{
+  background: #dddddd;
+  width: 220px;
+  margin:30px auto;
+  position: absolute;
+  right:10px;
+  top:15%;
+}
+.chuanlian-bar{
+  height:15px;
+  line-height:15px;
+  position: relative;
+}
+.chuanglian-num{
+  display: inline-block;
+  background: #eeeeee;
+  text-align: center;
+  width:44px;
+}
+.chuanglian-text{
+  font-size:10px;
+  color:#bbbbbb;
+}
+.chuanglian-sel-block{
+  width: 25px;
+  height: 20px;
+  margin-top: 0px;
+  position: relative;
+  top:-20px;
+}
+.chuanglian-sel-bar{
+  position: absolute;
+  height:25px;
+  width:25px;
+  border-radius: 25px;
+  background: #bbbbbb;
+  top:-2px;
+  left:15%;
+  border:1px solid #dddddd;
+}
+.leftcurtain{
+  width:50%;
+  height:205px;
+  top:0px;
+  left:0px;
+  position:absolute;
+  z-index:2;
+}
+.rightcurtain{
+  width:50%;
+  height:205px;
+  right:0px;
+  top:0px;
+  position:absolute;
+  z-index:3;
+}
